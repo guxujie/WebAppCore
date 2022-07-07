@@ -17,7 +17,7 @@ namespace WebAppCore.Service
         {
             //保存数据库 考虑使用事务
 
-          
+           
             var sql2 = "INSERT INTO payload (machine_id,id,timestamp,status)VALUES('{0}', '{1}', '{2}', '{3}');";
             string sqlstr2 = string.Format(sql2, message.topic, message.refstr, message.eventstr);
             var result2 = DbContext.Execute(sqlstr2);
